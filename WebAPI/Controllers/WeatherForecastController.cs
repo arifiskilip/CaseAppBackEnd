@@ -1,7 +1,5 @@
 using Application.Features;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Persistence.Contexts;
 
 namespace WebAPI.Controllers
 {
@@ -11,6 +9,13 @@ namespace WebAPI.Controllers
 		public async Task<IActionResult> Get([FromQuery] GetAllFilteredPaginatedTaskQuery query)
 		{
 			var result = await _mediator.Send(query);
+			return Ok(result);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Add([FromBody] AddCompletedTaskCommand command)
+		{
+			var result = await _mediator.Send(command);
 			return Ok(result);
 		}
 	}

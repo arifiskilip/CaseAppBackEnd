@@ -9,7 +9,8 @@ namespace Domain.Entities
 		public int CityId { get; set; }
 		public virtual City City { get; set; }
 		public int Total { get; set; }
+		public int Performed { get; set; } = 0;
 
-		public virtual ICollection<CompletedTask> CompletedTasks { get; set; }
+        public virtual ICollection<CompletedTask> CompletedTasks { get; set; }
 	}
 }
