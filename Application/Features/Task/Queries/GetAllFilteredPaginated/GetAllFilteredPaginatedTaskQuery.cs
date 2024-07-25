@@ -1,5 +1,6 @@
 ﻿using Application.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using Core.Extensions;
 using Core.Persistence.Paging;
 using MediatR;
@@ -8,7 +9,7 @@ using System.Linq.Expressions;
 
 namespace Application.Features
 {
-	public class GetAllFilteredPaginatedTaskQuery : IRequest<IPaginate<GetAllFilteredPaginatedTaskResponse>>
+	public class GetAllFilteredPaginatedTaskQuery : IRequest<IPaginate<GetAllFilteredPaginatedTaskResponse>>, ISecuredRequest
 	{
         public int? CityId { get; set; }
         public int? RegionId { get; set; }
@@ -17,7 +18,7 @@ namespace Application.Features
 		public int PageIndex { get; set; } = 1;
 		public int PageSize { get; set; } = 10;
 
-
+		public string[] Roles => ["Person"];
 
 		public class GetAllFilteredPaginatedTaskQueryHandler : IRequestHandler<GetAllFilteredPaginatedTaskQuery, IPaginate<GetAllFilteredPaginatedTaskResponse>>
 		{

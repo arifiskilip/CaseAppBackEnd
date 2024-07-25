@@ -1,13 +1,14 @@
 ﻿using Application.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features
 {
-	public class GetAllTaskQuery : IRequest<List<GetAllTaskResponse>>
+	public class GetAllTaskQuery : IRequest<List<GetAllTaskResponse>>, ISecuredRequest
 	{
-
+		public string[] Roles => ["Person"];
 
 		public class GetAllTaskQueryHandler : IRequestHandler<GetAllTaskQuery, List<GetAllTaskResponse>>
 		{

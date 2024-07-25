@@ -1,12 +1,13 @@
 ﻿using Application.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using MediatR;
 
 namespace Application.Features
 {
-	public class GetAllRegionQuery : IRequest<List<GetAllRegionResponse>>
+	public class GetAllRegionQuery : IRequest<List<GetAllRegionResponse>>, ISecuredRequest
 	{
-
+		public string[] Roles => ["Person"];
 
 		public class GetAllRegionQueryHandler : IRequestHandler<GetAllRegionQuery, List<GetAllRegionResponse>>
 		{

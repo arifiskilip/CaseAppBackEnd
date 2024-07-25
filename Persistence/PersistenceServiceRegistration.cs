@@ -23,6 +23,7 @@ namespace Persistence
 			services.AddScoped<ITaskService, TaskService>();
 			services.AddScoped<ITaskTypeRepository, TaskTypeRepository>();
 			services.AddScoped<IUserRepository, UserRepository>();
+			services.AddScoped<IAuthService, AuthService>();
 			return services;
 		}
 	}
