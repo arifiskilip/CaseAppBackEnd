@@ -11,6 +11,7 @@ namespace Application.Features
 	public class GetAllFilteredPaginatedTaskQuery : IRequest<IPaginate<GetAllFilteredPaginatedTaskResponse>>
 	{
         public int? CityId { get; set; }
+        public int? RegionId { get; set; }
         public int? TaskTypeId { get; set; }
 
 		public int PageIndex { get; set; } = 1;
@@ -35,6 +36,10 @@ namespace Application.Features
 				if (request.CityId.HasValue)
 				{
 					query = query.AndAlso(x => x.CityId == request.CityId);
+				}
+				if (request.RegionId.HasValue)
+				{
+					query = query.AndAlso(x => x.City.RegionId == request.RegionId);
 				}
 				if (request.TaskTypeId.HasValue)
 				{
