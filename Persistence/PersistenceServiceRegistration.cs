@@ -22,6 +22,7 @@ namespace Persistence
 			services.AddScoped<ITaskRepository, TaskRepository>();
 			services.AddScoped<ITaskService, TaskService>();
 			services.AddScoped<ITaskTypeRepository, TaskTypeRepository>();
+			services.AddScoped<IUserRepository, UserRepository>();
 			return services;
 		}
 	}

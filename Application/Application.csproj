@@ -21,7 +21,6 @@
     <Folder Include="Features\City\Constants\" />
     <Folder Include="Features\City\Rules\" />
     <Folder Include="Features\CompletedTask\Constants\" />
-    <Folder Include="Features\CompletedTask\Queries\" />
     <Folder Include="Features\Region\Constants\" />
     <Folder Include="Features\Region\Rules\" />
   </ItemGroup>

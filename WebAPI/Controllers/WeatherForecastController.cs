@@ -18,5 +18,11 @@ namespace WebAPI.Controllers
 			var result = await _mediator.Send(command);
 			return Ok(result);
 		}
+		[HttpGet]
+		public async Task<IActionResult> GetBYCompleted([FromQuery] GetByIdCompletedTaskQuery query)
+		{
+			var result = await _mediator.Send(query);
+			return Ok(result);
+		}
 	}
 }

@@ -66,7 +66,8 @@ namespace Persistence.Seeds
 				byte[] passwordHash, passwordSalt;
 				HashingHelper.CreatePasswordHash("Arif123.", out passwordHash, out passwordSalt);
 				context.Users.AddRange(
-					new User { Id = 1, FirstName = "Arif", LastName = "İskilip", Email = "arifiskilip@gmail.com", PhoneNumber = "05555555555", PasswordHash = passwordHash, PasswordSalt = passwordSalt }
+					new User { Id = 1, FirstName = "Arif", LastName = "İskilip", Email = "arifiskilip@gmail.com", PhoneNumber = "05555555555", PasswordHash = passwordHash, PasswordSalt = passwordSalt },
+					new User { Id = 2, FirstName = "Ahmet", LastName = "Yılmaz", Email = "ahmet@gmail.com", PhoneNumber = "05555555554", PasswordHash = passwordHash, PasswordSalt = passwordSalt }
 					);
 				context.SaveChanges();
 			}
