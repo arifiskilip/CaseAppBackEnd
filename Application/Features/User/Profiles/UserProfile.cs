@@ -1,7 +1,6 @@
-﻿using Application.Features.User.Queries.GetUserByAuthenticated;
-using AutoMapper;
+﻿using AutoMapper;
 
-namespace Application.Features.User.Profiles
+namespace Application.Features
 {
 	public class UserProfile : Profile
 	{

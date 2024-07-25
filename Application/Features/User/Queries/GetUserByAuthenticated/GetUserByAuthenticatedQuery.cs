@@ -4,7 +4,7 @@ using AutoMapper;
 using Core.Application.Pipelines.Authorization;
 using MediatR;
 
-namespace Application.Features.User.Queries.GetUserByAuthenticated
+namespace Application.Features
 {
 	public class GetUserByAuthenticatedQuery : IRequest<GetUserByAuthenticatedResponse>, ISecuredRequest
 	{

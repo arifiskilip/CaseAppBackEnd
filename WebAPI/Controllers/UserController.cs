@@ -1,4 +1,4 @@
-﻿using Application.Features.User.Queries.GetUserByAuthenticated;
+﻿using Application.Features;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers

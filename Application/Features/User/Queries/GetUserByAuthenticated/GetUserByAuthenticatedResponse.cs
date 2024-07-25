@@ -1,4 +1,4 @@
-﻿namespace Application.Features.User.Queries.GetUserByAuthenticated
+﻿namespace Application.Features
 {
 	public class GetUserByAuthenticatedResponse
 	{
