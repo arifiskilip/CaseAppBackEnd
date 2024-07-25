@@ -21,8 +21,9 @@ namespace Persistence.Seeds
 			if (!context.UserOperationClaims.Any())
 			{
 				context.UserOperationClaims.AddRange(
-					new UserOperationClaim { Id = 1, UserId = 1, OperationClaimId = 1 }
-					); ;
+					new UserOperationClaim { Id = 1, UserId = 1, OperationClaimId = 1 },
+					new UserOperationClaim { Id = 2, UserId = 2, OperationClaimId = 1 }
+					);
 				context.SaveChanges();
 			}
 			if (!context.Regions.Any())
